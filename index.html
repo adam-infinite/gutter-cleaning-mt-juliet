@@ -106,8 +106,9 @@
                     <h3 class="text-2xl font-bold text-gray-900 mb-4">Get Your Free Gutter Cleaning Quote</h3>
                     <p class="text-gray-600 mb-6">Fast response • Competitive pricing • No obligation</p>
                     
-                    <form name="gutter-quote" method="POST" data-netlify="true" action="/success.html" class="space-y-4">
+                    <form name="gutter-quote" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/success.html" class="space-y-4">
                         <input type="hidden" name="form-name" value="gutter-quote">
+                        <input type="hidden" name="bot-field" />
                         
                         <div>
                             <label class="block text-sm font-semibold text-gray-700 mb-2">Full Name*</label>
