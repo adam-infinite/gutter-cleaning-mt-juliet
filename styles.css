@@ -6,7 +6,7 @@
 /* Smooth scrolling with padding for fixed nav */
 html {
     scroll-behavior: smooth;
-    scroll-padding-top: 80px;
+    scroll-padding-top: 100px;
 }
 
 /* Add more styles below as needed */
