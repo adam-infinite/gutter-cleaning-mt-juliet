@@ -373,43 +373,13 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-12">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid md:grid-cols-4 gap-8">
-                <div>
-                    <h3 class="text-xl font-bold mb-4">Mt. Juliet Gutter Cleaning</h3>
-                    <p class="text-gray-400">Professional gutter services in Mt. Juliet and Wilson County, TN.</p>
-                </div>
-                <div>
-                    <h3 class="text-xl font-bold mb-4">Services</h3>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="/gutter-cleaning" class="hover:text-white">Gutter Cleaning</a></li>
-                        <li><a href="/gutter-repair" class="hover:text-white">Gutter Repair</a></li>
-                        <li><a href="/gutter-guard-installation" class="hover:text-white">Gutter Guards</a></li>
-                        <li><a href="/gutter-installation" class="hover:text-white">Gutter Installation</a></li>
-                        <li><a href="/downspout-repair" class="hover:text-white">Downspout Repair</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h3 class="text-xl font-bold mb-4">Service Areas</h3>
-                    <ul class="space-y-2 text-gray-400">
-                        <li>Mt. Juliet</li>
-                        <li>Providence</li>
-                        <li>Beckwith Crossing</li>
-                        <li>Lebanon</li>
-                        <li>Wilson County</li>
-                    </ul>
-                </div>
-                <div>
-                    <h3 class="text-xl font-bold mb-4">Contact</h3>
-                    <p class="text-gray-400 mb-2">Serving Wilson County, TN</p>
-                    <a href="#quote" class="inline-block bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 transition">Get Free Quote</a>
-                </div>
-            </div>
-            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-                <p>&copy; 2025 Mt. Juliet Gutter Cleaning. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
+    <div id="footer-placeholder"></div>
+    <script>
+        fetch('/footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-placeholder').innerHTML = data;
+            });
+    </script>
 </body>
 </html>
