@@ -29,14 +29,17 @@
     <link rel="stylesheet" href="/styles.css">
 </head>
 <body class="bg-gray-50">
-    <!-- Header -->
-    <header class="bg-white shadow-sm">
-        <div class="max-w-6xl mx-auto px-4 py-4">
-            <a href="/" class="text-2xl font-bold text-green-600 hover:text-green-700">
-                Gutter Cleaning Mt. Juliet
-            </a>
-        </div>
-    </header>
+
+<!-- Navbar -->
+<div id="navbar-placeholder"></div>
+<script>
+    fetch('/nav.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('navbar-placeholder').innerHTML = data;
+        })
+        .catch(error => console.error('Error loading navigation:', error));
+</script>
 
     <!-- Hero Section -->
     <section class="bg-gradient-to-br from-green-600 to-green-700 text-white py-16">
