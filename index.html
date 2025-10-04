@@ -77,25 +77,16 @@
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 </head>
 <body class="bg-gray-50">
-    <!-- Header with Navigation -->
-    <header class="bg-white shadow-md sticky top-0 z-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-            <div class="flex justify-between items-center">
-                <div>
-                    <a href="/" class="text-2xl font-bold text-green-700 hover:text-green-800">Mt. Juliet Gutter Cleaning</a>
-                    <p class="text-sm text-gray-600">Professional Gutter Services in Wilson County</p>
-                </div>
-                <nav class="hidden md:flex space-x-6">
-                    <a href="/" class="text-gray-700 hover:text-green-600 font-medium">Home</a>
-                    <a href="/gutter-cleaning" class="text-gray-700 hover:text-green-600 font-medium">Cleaning</a>
-                    <a href="/gutter-repair" class="text-gray-700 hover:text-green-600 font-medium">Repair</a>
-                    <a href="/gutter-guard-installation" class="text-gray-700 hover:text-green-600 font-medium">Guards</a>
-                    <a href="/gutter-installation" class="text-gray-700 hover:text-green-600 font-medium">Installation</a>
-                    <a href="/downspout-repair" class="text-gray-700 hover:text-green-600 font-medium">Downspouts</a>
-                </nav>
-            </div>
-        </div>
-    </header>
+   
+    <!-- Navbar -->
+<script>
+    fetch('/nav.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('navbar-placeholder').innerHTML = data;
+        })
+        .catch(error => console.error('Error loading navigation:', error));
+</script>
 
     <!-- Hero Section -->
     <section class="bg-gradient-to-r from-green-700 to-green-900 text-white py-20">
